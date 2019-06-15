@@ -1,0 +1,21 @@
+{
+  "name": "koa-graphql-mongo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/run.js",
+    "data": "node bin/insert.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-koa": "^2.6.3",
+    "config": "^3.1.0",
+    "graphql": "^14.3.1",
+    "koa": "^2.7.0",
+    "mongoose": "^5.6.0"
+  }
+}
