@@ -1,9 +1,9 @@
 const Koa = require('koa');
 const { ApolloServer, gql } = require('apollo-server-koa')
+const Router = require('koa-router')
 const db = require('./lib/service/db')
 const typeDefs = gql(require('./lib/graphql/typeDefs'))
 const resolvers = require('./lib/graphql/resolvers')
-const Router = require('koa-router')
 const FileUpload = require('./lib/service/fileupload');
 
 const app = new Koa();
@@ -29,6 +29,7 @@ second.post('/addevent', async (ctx, next) => {
   console.log(" POST /v1/addevent");
   // await xxxx();
 });
+
 v1.use('/v1', second.routes(), second.allowedMethods());
 
 app.use(v1.routes());
