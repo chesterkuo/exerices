@@ -1,0 +1,5 @@
+
+curl -X POST -d "username=chester&password=mypassword" -H "Content-Type: application/x-www-form-urlencoded" http://localhost:7000/auth
+#
+curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTU2MDY4OTQwMX0.GOtO-5Xy25dkemalvmjiILKrqQ4eQK6KTKXH_AXg9IA" http://localhost:7000/my-pets |python -mjson.tool
+
