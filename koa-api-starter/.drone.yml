@@ -1,0 +1,13 @@
+pipeline:
+  run-api-starter-tests:
+    image: node:10.16.0
+    commands:
+      - ./bin/run.sh
+    when:
+      status: [ failure, success ]
+      event: [ pull_request ]
+
+services:
+  mongo:
+    image: mongo:3.6.3
+branches: [ master, "*:master" ]
